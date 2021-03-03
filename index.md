@@ -15,10 +15,10 @@
     [[html]](./notebooks/pydata01-intro.html)
 1. 파이썬 프로그래밍 기초 1부: 기본 문법 &nbsp;
     [[html]](./notebooks/pydata02-python-basics-1.html),
-    [[colab]](https://colab.research.google.com/github/codingalzi/python-data-analysis/blob/master/notebooks/pydata02-python-basics-1.ipynb)
+    [[colab]](https://colab.research.google.com/github/codingalzi/ml-for-mathematicians/blob/master/notebooks/pydata02-python-basics-1.ipynb)
 1. 파이썬 프로그래밍 기초 2부: 스칼라 자료형, 제어문, `range()` 함수 &nbsp;
     [[html]](./notebooks/pydata03-python-basics-2.html),
-    [[colab]](https://colab.research.google.com/github/codingalzi/python-data-analysis/blob/master/notebooks/pydata03-python-basics-2.ipynb)
+    [[colab]](https://colab.research.google.com/github/codingalzi/ml-for-mathematicians/blob/master/notebooks/pydata03-python-basics-2.ipynb)
 1. ...
 
 ### 권장 사항
@@ -33,7 +33,7 @@
 온라인 활용법은 아무런 설치과정 없이 바로 실습할 수 있는 환경을 제공합니다. 
 
 추천 활용법: [구글 코랩 활용 ](https://colab.research.google.com/github/codingalzi/python-data-analysis/blob/master/)
-<a href="https://colab.research.google.com/github/codingalzi/python-data-analysis/blob/master/"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+<a href="https://colab.research.google.com/github/codingalzi/ml-for-mathematicians/blob/master/"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 * 주의: 온라인 상에서 작업한 내용은 저장되지 않으며, 따라서 먼저 자신의 계정으로 사본을 만든 후에 수정 및 실행해야 함.
 * [구글 코랩 사용법 안내 동영상](https://www.youtube.com/watch?v=Jb_n90gHdP0) 참조
