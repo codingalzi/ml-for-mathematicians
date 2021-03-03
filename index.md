@@ -13,10 +13,19 @@
 
 1. 강의소개 &nbsp;
     [[html]](./notebooks/pydata01-intro.html)
-1. 파이썬 프로그래밍 기초 1부 &nbsp;
+1. 파이썬 프로그래밍 기초 1부: 기본 문법 &nbsp;
     [[html]](./notebooks/pydata02-python-basics-1.html),
     [[colab]](https://colab.research.google.com/github/codingalzi/python-data-analysis/blob/master/notebooks/pydata02-python-basics-1.ipynb)
+1. 파이썬 프로그래밍 기초 2부: 스칼라 자료형, 제어문, `range()` 함수 &nbsp;
+    [[html]](./notebooks/pydata03-python-basics-2.html),
+    [[colab]](https://colab.research.google.com/github/codingalzi/python-data-analysis/blob/master/notebooks/pydata03-python-basics-2.ipynb)
 1. ...
+
+### 권장 사항
+
+파이썬 프로그래밍이 처음이거나 기초가 약하다면 아래 파이썬 데이터 분석 프로그래밍 왕기초 내용을 먼저 읽기를 추천합니다.
+
+* [파이썬 데이터 과학 입문](https://formal.hknu.ac.kr/Gongsu-DataSci/)
 
 ### 프로그래밍 환경
 
@@ -28,3 +37,10 @@
 
 * 주의: 온라인 상에서 작업한 내용은 저장되지 않으며, 따라서 먼저 자신의 계정으로 사본을 만든 후에 수정 및 실행해야 함.
 * [구글 코랩 사용법 안내 동영상](https://www.youtube.com/watch?v=Jb_n90gHdP0) 참조
+
+### 참고 자료
+
+* 판다스(pandas) 실전 활용법 소개 동영상 모음집
+    * [Data analysis in Python with Pandas](https://www.youtube.com/playlist?list=PL5-da3qGB5ICCsgW1MxlZ0Hq8LL5U3u9y)
+        * 자동번역 한글자막 수준 매우 우수: 설정 => 자막 => 자동 번역 => 한국어
+        * [강의노트](https://nbviewer.jupyter.org/github/justmarkham/pandas-videos/blob/master/pandas.ipynb) 제공됨.
