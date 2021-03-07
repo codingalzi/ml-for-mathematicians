@@ -17,7 +17,7 @@
     * 슬라이드: [[html]](./slides/handson-ml-01.slides.html), 
 	[[pdf]](./slides/handson-ml-01-slides.pdf)
     * 주피터 노트북: [[html]](./notebooks/handson-ml-01.html), 
-	[[colab]](https://colab.research.google.com/github/codingalzi/ml-for-mathematicians/blob/master/notebooks/handson-ml-01.ipynb)
+	[[colab]](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-01.ipynb)
 1. 파이썬 프로그래밍 기초 1부: 기초 문법 &nbsp;
     [[html]](./notebooks/pydata02-python-basics-1.html),
     [[colab]](https://colab.research.google.com/github/codingalzi/ml-for-mathematicians/blob/master/notebooks/pydata02-python-basics-1.ipynb)
