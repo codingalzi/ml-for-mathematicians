@@ -13,15 +13,18 @@
 
 * [강의 목표 및 주요 내용](./notebooks/mlmath01-intro.html)
 
-### 목차: 머신러닝
+### 목차
+
+#### 머신러닝
 
 1. 한 눈에 보는 머신러닝
     * 슬라이드: [[html]](./slides/mlmath01.slides.html), 
     [[pdf]](./slides/mlmath01-slides.pdf)
     * 주피터 노트북: [[html]](./notebooks/mlmath01.html), 
     [[colab]](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/mlmath01.ipynb)
+1. ...
 
-### 목차: 파이썬 기초
+#### 파이썬 기초
 
 1. 파이썬 기본 자료형 1부 &nbsp;
     [[html]](./notebooks/python01.html),
