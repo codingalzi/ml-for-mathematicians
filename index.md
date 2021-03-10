@@ -21,7 +21,7 @@
     * 슬라이드: [[html]](./slides/mlmath01.slides.html), 
     [[pdf]](./slides/mlmath01-slides.pdf)
     * 주피터 노트북: [[html]](./notebooks/mlmath01.html), 
-    [[colab]](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/mlmath01.ipynb)
+    [[colab]](https://colab.research.google.com/github/codingalzi/ml-for-mathematics/blob/master/notebooks/mlmath01.ipynb)
 1. ...
 
 #### 파이썬 기초
