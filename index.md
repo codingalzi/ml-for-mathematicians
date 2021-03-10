@@ -9,21 +9,24 @@
 [오렐리앙 제롱(Aur&eacute;lien G&eacute;ron)](https://github.com/ageron/handson-ml2), 
 그리고 강의자료를 지원한 한빛아카데미에게 진심어린 감사를 전합니다.
 
-### 목차
+### 강의소개
 
-1. 강의소개 &nbsp;
-    [[html]](./notebooks/pydata01-intro.html)
+* [강의 목표 및 주요 내용](./notebooks/mlmath01-intro.html)
+
+### 목차: 머신러닝
+
 1. 한 눈에 보는 머신러닝
-    * 슬라이드: [[html]](./slides/handson-ml-01.slides.html), 
-	[[pdf]](./slides/handson-ml-01-slides.pdf)
-    * 주피터 노트북: [[html]](./notebooks/handson-ml-01.html), 
-	[[colab]](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-01.ipynb)
-1. 파이썬 프로그래밍 기초 1부: 기초 문법 &nbsp;
-    [[html]](./notebooks/pydata02-python-basics-1.html),
-    [[colab]](https://colab.research.google.com/github/codingalzi/ml-for-mathematicians/blob/master/notebooks/pydata02-python-basics-1.ipynb)
-1. 파이썬 프로그래밍 기초 2부: 스칼라 자료형, 제어문, `range()` 함수 &nbsp;
-    [[html]](./notebooks/pydata03-python-basics-2.html),
-    [[colab]](https://colab.research.google.com/github/codingalzi/ml-for-mathematicians/blob/master/notebooks/pydata03-python-basics-2.ipynb)
+    * 슬라이드: [[html]](./slides/mlmath01.slides.html), 
+    [[pdf]](./slides/mlmath01-slides.pdf)
+    * 주피터 노트북: [[html]](./notebooks/mlmath01.html), 
+    [[colab]](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/mlmath01.ipynb)
+
+### 목차: 파이썬 기초
+
+1. 파이썬 기본 자료형 1부 &nbsp;
+    [[html]](./notebooks/python01.html),
+    [[colab]](https://colab.research.google.com/github/codingalzi/ml-for-mathematicians/blob/master/notebooks/python01.ipynb)
+    (준비중)
 1. ...
 
 **링크 활용법**
