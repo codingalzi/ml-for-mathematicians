@@ -29,7 +29,6 @@
 1. 파이썬 기본 자료형 1부 &nbsp;
     [[html]](./notebooks/python01.html),
     [[colab]](https://colab.research.google.com/github/codingalzi/ml-for-mathematicians/blob/master/notebooks/python01.ipynb)
-    (준비중)
 1. ...
 
 **링크 활용법**
