@@ -39,6 +39,9 @@
 1. 파이썬 기본 자료형 2부 &nbsp;
     [[html]](./notebooks/python02.html),
     [[colab]](https://colab.research.google.com/github/codingalzi/ml-for-mathematicians/blob/master/notebooks/python02.ipynb)
+1. 파이썬 기본 자료형 3부 &nbsp;
+    [[html]](./notebooks/python03.html),
+    [[colab]](https://colab.research.google.com/github/codingalzi/ml-for-mathematicians/blob/master/notebooks/python03.ipynb)
 1. ...
 
 **링크 활용법**
@@ -46,9 +49,9 @@
 * html 버전: 읽기 전용 주피터 노트북
 * colab 버전: 구글 코랩에서 직접 실행 가능한 주피터 노트북
 
-### 권장 사항
+### 참고
 
-파이썬 프로그래밍이 처음이거나 기초가 약하다면 아래 파이썬 데이터 분석 프로그래밍 왕기초 내용을 먼저 읽기를 추천합니다.
+파이썬 기초 강좌는 아래 사이트를 업데이트 하는 형식으로 제공됩니다.
 
 * [파이썬 데이터 과학 입문](https://formal.hknu.ac.kr/Gongsu-DataSci/)
 
@@ -68,10 +71,3 @@
 주피터 노트북 사용법을 익히면 구글 코랩에 보다 쉽게 적응할 수 있습니다.
 
 * [주피터 노트북 사용법](https://www.youtube.com/watch?v=4_-IIfbdR5M&list=PLRYL8FHwJMhD_Wi22JLm2VURrjt_iVX7X&index=2)
-
-### 참고 자료
-
-* 판다스(pandas) 실전 활용법 소개 동영상 모음집
-    * [Data analysis in Python with Pandas](https://www.youtube.com/playlist?list=PL5-da3qGB5ICCsgW1MxlZ0Hq8LL5U3u9y)
-        * 자동번역 한글자막 수준 매우 우수: 설정 => 자막 => 자동 번역 => 한국어
-        * [강의노트](https://nbviewer.jupyter.org/github/justmarkham/pandas-videos/blob/master/pandas.ipynb) 제공됨.
