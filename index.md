@@ -48,6 +48,7 @@
     [[html]](./notebooks/python03.html),
     [[colab]](https://colab.research.google.com/github/codingalzi/ml-for-mathematicians/blob/master/notebooks/python03.ipynb)
     - 제어문(if 조건문, for 반복문, while 반복문)
+    - pass, continue, break 예약어
 1. ...
 
 **링크 활용법**
