@@ -44,7 +44,7 @@
     [[html]](./notebooks/python02.html),
     [[colab]](https://colab.research.google.com/github/codingalzi/ml-for-mathematicians/blob/master/notebooks/python02.ipynb)
     - 스칼라 자료형 2편(문자열)
-1. 파이썬 기본 자료형 3부 &nbsp;
+1. 제어문 &nbsp;
     [[html]](./notebooks/python03.html),
     [[colab]](https://colab.research.google.com/github/codingalzi/ml-for-mathematicians/blob/master/notebooks/python03.ipynb)
     - 제어문(if 조건문, for 반복문, while 반복문)
