@@ -46,28 +46,20 @@
 
 **링크 활용법**
 
-* html 버전: 읽기 전용 주피터 노트북
-* colab 버전: 구글 코랩에서 직접 실행 가능한 주피터 노트북
+* html 버전: 읽기 전용 주피터 노트북 또는 슬라이드
+* pdf: PC 용 pdf 슬라이드
+* colab 버전: 구글 코랩에서 실행 가능한 주피터 노트북
+
+### 프로그래밍 환경
+
+아무런 설치과정 없이 바로 실습할 수 있는 온라인 프로그래밍 환경인 구글 코랩 사용을 추천합니다.
+구글 코랩 사용법은 아래 동영상을 참조하세요.
+
+* [구글 코랩 사용법](https://www.youtube.com/watch?v=Jb_n90gHdP0)
+* [주피터 노트북 사용법](https://www.youtube.com/watch?v=4_-IIfbdR5M&list=PLRYL8FHwJMhD_Wi22JLm2VURrjt_iVX7X&index=2)
 
 ### 참고
 
 파이썬 기초 강좌는 아래 사이트를 업데이트 하는 형식으로 제공됩니다.
 
 * [파이썬 데이터 과학 입문](https://formal.hknu.ac.kr/Gongsu-DataSci/)
-
-### 프로그래밍 환경
-
-아무런 설치과정 없이 바로 실습할 수 있는 온라인 프로그래밍 환경을 사용합니다.
-
-* [구글 코랩 활용](https://colab.research.google.com/github/codingalzi/python-data-analysis/blob/master/) 
-<a href="https://colab.research.google.com/github/codingalzi/ml-for-mathematicians/blob/master/"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-
-**주의사항: 온라인 상에서 작업한 내용은 저장되지 않으며, 따라서 먼저 자신의 계정으로 사본을 만든 후에 수정 및 실행해야 함.**
-
-구글 코랩 사용법은 아래 동영상을 참조하세요.
-
-* [구글 코랩 사용법](https://www.youtube.com/watch?v=Jb_n90gHdP0)
-
-주피터 노트북 사용법을 익히면 구글 코랩에 보다 쉽게 적응할 수 있습니다.
-
-* [주피터 노트북 사용법](https://www.youtube.com/watch?v=4_-IIfbdR5M&list=PLRYL8FHwJMhD_Wi22JLm2VURrjt_iVX7X&index=2)
