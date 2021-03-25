@@ -51,6 +51,15 @@
     - pass, continue, break 예약어
 1. ...
 
+#### 파이썬 프로그래밍 실습
+
+1. 실습 1 &nbsp;
+    [[html]](./practices/practice01.html),
+    [[colab]](https://colab.research.google.com/github/codingalzi/ml-for-mathematicians/blob/master/practices/practice01.ipynb)
+1. 실습 2 &nbsp;
+    [[html]](./practices/practice02.html),
+    [[colab]](https://colab.research.google.com/github/codingalzi/ml-for-mathematicians/blob/master/practices/practice02.ipynb)
+
 **링크 활용법**
 
 * html 버전: 읽기 전용 주피터 노트북 또는 슬라이드
