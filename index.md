@@ -11,7 +11,8 @@
 
 ### 강의소개
 
-* [강의 목표 및 주요 내용](./notebooks/mlmath00-intro.html)
+* 슬라이드: [[html]](./slides/mlmath00-intro.slides.html), 
+    [[pdf]](./slides/mlmath00-intro-slides.pdf)
 
 ### 목차
 
