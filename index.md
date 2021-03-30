@@ -27,7 +27,7 @@
     [[pdf]](./slides/mlmath02-slides.pdf)
     * 주피터 노트북: [[html]](https://codingalzi.github.io/handson-ml/notebooks/handson-ml-02.html), 
     [[colab]](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-02.ipynb)
-    * Orange3 데이터: [[workflow]](https://raw.githubusercontent.com/codingalzi/ml-for-mathematicians/master/orange3/california_house-prices.ows), 
+    * Orange3 실습: [[workflow]](https://raw.githubusercontent.com/codingalzi/ml-for-mathematicians/master/orange3/california_house-prices.ows), 
     [[data]](https://raw.githubusercontent.com/codingalzi/ml-for-mathematicians/master/orange3/california_house_prices.tab)
 1. ...
 
