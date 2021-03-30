@@ -62,7 +62,8 @@
 
 * html 버전: 읽기 전용 주피터 노트북 또는 슬라이드
 * pdf: PC 용 pdf 슬라이드
-* colab 버전: 구글 코랩에서 실행 가능한 주피터 노트북
+* colab: 구글 코랩에서 실행 가능한 주피터 노트북
+* workflow, data: Orange3에서 사용가능한 워크플로오와 데이터
 
 ### 프로그래밍 환경
 
@@ -71,6 +72,13 @@
 
 * [구글 코랩 사용법](https://www.youtube.com/watch?v=Jb_n90gHdP0)
 * [주피터 노트북 사용법](https://www.youtube.com/watch?v=4_-IIfbdR5M&list=PLRYL8FHwJMhD_Wi22JLm2VURrjt_iVX7X&index=2)
+
+### Orange3 활용
+
+머신러닝을 Orange3 프로그램을 이용하여 실습합니다.
+사용법은 아래 동영상을 참조하세요.
+
+* [생활코딩: Orange3](https://www.opentutorials.org/course/4549)
 
 ### 참고
 
