@@ -25,23 +25,23 @@
 1. 머신러닝 프로젝트 처음부터 끝까지
     * 슬라이드: [[html]](./slides/mlmath02.slides.html), 
     [[pdf]](./slides/mlmath02-slides.pdf)
-    * Orange3 실습: <a href="https://raw.githubusercontent.com/codingalzi/ml-for-mathematicians/master/orange3/california_house-prices.ows" download>[workflow]</a>, 
-    <a href="https://raw.githubusercontent.com/codingalzi/ml-for-mathematicians/master/orange3/california_house_prices.tab" download>[data]</a>
+    * Orange3 실습: <a href="https://raw.githubusercontent.com/codingalzi/mle/master/orange3/california_house-prices.ows" download>[workflow]</a>, 
+    <a href="https://raw.githubusercontent.com/codingalzi/mle/master/orange3/california_house_prices.tab" download>[data]</a>
 1. ...
 
 #### 파이썬 기초
 
 1. 파이썬 기본 자료형 1부 &nbsp;
     [[html]](./notebooks/python01.html),
-    [[colab]](https://colab.research.google.com/github/codingalzi/ml-for-mathematicians/blob/master/notebooks/python01.ipynb)
+    [[colab]](https://colab.research.google.com/github/codingalzi/mle/blob/master/notebooks/python01.ipynb)
     - 파이썬 언어 소개, 변수, 연산, 스칼라 자료형 1편(정수, 부동소수점, 부울 값, None)
 1. 파이썬 기본 자료형 2부 &nbsp;
     [[html]](./notebooks/python02.html),
-    [[colab]](https://colab.research.google.com/github/codingalzi/ml-for-mathematicians/blob/master/notebooks/python02.ipynb)
+    [[colab]](https://colab.research.google.com/github/codingalzi/mle/blob/master/notebooks/python02.ipynb)
     - 스칼라 자료형 2편(문자열)
 1. 제어문 &nbsp;
     [[html]](./notebooks/python03.html),
-    [[colab]](https://colab.research.google.com/github/codingalzi/ml-for-mathematicians/blob/master/notebooks/python03.ipynb)
+    [[colab]](https://colab.research.google.com/github/codingalzi/ml/blob/master/notebooks/python03.ipynb)
     - 제어문(if 조건문, for 반복문, while 반복문), 주요 예약어(pass, continue, break)
 1. ...
 
@@ -49,7 +49,7 @@
 
 1. 실습 1 &nbsp;
     [[html]](./practices/practice01.html),
-    [[colab]](https://colab.research.google.com/github/codingalzi/ml-for-mathematicians/blob/master/practices/practice01.ipynb)
+    [[colab]](https://colab.research.google.com/github/codingalzi/mle/blob/master/practices/practice01.ipynb)
 1. ...
 
 **링크 활용법**
