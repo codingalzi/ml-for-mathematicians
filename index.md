@@ -1,7 +1,7 @@
 머신러닝의 주요 개념과 다양한 모델의 작동법을 파이썬 프로그래밍 지식이 (거의) 없는 비전공자들에게 소개합니다.
 소개되는 내용은 [&lt;핸즈온 머신러닝(2판)&gt;](https://m.hanbit.co.kr/store/books/book_view.html?p_code=B7033438574)을
 기본으로 참고합니다.
-머신러닝 프로그래밍을 직접 하지 않는 대신 Orange3 앱을 이용하여 머신러닝의 주요 개념과 모델의 작동법을 전달합니다.
+머신러닝 프로그래밍을 직접 하지 않는 대신 [Orange3](https://orangedatamining.com/) 앱을 이용하여 머신러닝의 주요 개념과 모델의 작동법을 전달합니다.
 더불어 파이썬 프로그래밍 기초 학습 자료도 함께 제공합니다.
 
 ### 감사의 글
@@ -69,18 +69,19 @@
 
 ### 프로그래밍 환경
 
-아무런 설치과정 없이 바로 실습할 수 있는 온라인 프로그래밍 환경인 구글 코랩 사용을 추천합니다.
+#### Orange3
+다운받은 워크플로우와 데이터를 Orange3 앱으로 불러오면 슬라이드에 포함된 내용을 워크플로울 따라가며 확인할 수 있습니다.
+Orange3 앱의 사용법은 아래 동영상을 참조하세요.
+
+* [생활코딩: Orange3](https://www.opentutorials.org/course/4549)
+
+
+#### 파이썬
+파이썬 프로그래밍은 아무런 설치과정 없이 바로 실습할 수 있는 온라인 프로그래밍 환경인 구글 코랩 사용을 추천합니다.
 구글 코랩 사용법은 아래 동영상을 참조하세요.
 
 * [구글 코랩 사용법](https://www.youtube.com/watch?v=Jb_n90gHdP0)
 * [주피터 노트북 사용법](https://www.youtube.com/watch?v=4_-IIfbdR5M&list=PLRYL8FHwJMhD_Wi22JLm2VURrjt_iVX7X&index=2)
-
-### Orange3 활용
-
-머신러닝을 Orange3 프로그램을 이용하여 실습합니다.
-사용법은 아래 동영상을 참조하세요.
-
-* [생활코딩: Orange3](https://www.opentutorials.org/course/4549)
 
 ### 참고
 
