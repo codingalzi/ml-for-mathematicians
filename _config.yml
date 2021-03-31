@@ -1,6 +1,6 @@
 theme: jekyll-theme-cayman
-title: 수학자를 위한 머신러닝
-description: 파이썬 언어를 이용한 데이터 분석과 머신러닝의 기초 지식 제공 
+title: 모두를 위한 머신러닝
+description: 머신러닝 개념 및 활용법 소개
 show_downloads: false
 github:
   is_project_page: true
