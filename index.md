@@ -1,11 +1,12 @@
-[&lt;파이썬 라이브러리를 활용한 데이터 분석(2판)&gt;](https://m.hanbit.co.kr/store/books/book_view.html?p_code=B6417848794#)과
 [&lt;핸즈온 머신러닝(2판)&gt;](https://m.hanbit.co.kr/store/books/book_view.html?p_code=B7033438574)의
-소스코드를 담고 있는 주피터 노트북을 바탕으로 해서
-파이썬 프로그래밍 지식이 거의 없는 수학자들을 위한 머신러닝 입문 강의노트 모음집을 제공합니다.
+내용을 파이썬 프로그래밍 지식이 거의 없는 수학자들에게 소개합니다.
+머신러닝 프로그래밍은 직접 하지 않는 대신 Orange3 앱을 이용하여 머신러닝의 주요 개념과 모델의 작동법을
+전달하는 게 최우선의 목표입니다.
+더불어 파이썬 프로그래밍 기초 학습 자료도 함께 제공합니다.
 
 ### 감사의 글
 
-소중한 소스코드를 공개한 [웨스 맥키니(Wes McKinney)](https://github.com/wesm/pydata-book)와 
+소중한 소스코드를 공개한 
 [오렐리앙 제롱(Aur&eacute;lien G&eacute;ron)](https://github.com/ageron/handson-ml2), 
 그리고 강의자료를 지원한 한빛아카데미에게 진심어린 감사를 전합니다.
 
