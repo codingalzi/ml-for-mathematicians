@@ -8,5 +8,5 @@
 더불어 파이썬 프로그래밍 기초 학습 자료도 함께 제공합니다.
 
 학습 내용 및 프로그래밍 환경, 주피터 노트북 등 학습환경과 관련된 자세한 사항은 
-[강의노트 홈페이지](https://codingalzi.github.io/ml-for-mathematicians/)에서 
+[강의노트 홈페이지](https://codingalzi.github.io/mle/)에서 
 확인할 수 있습니다.
