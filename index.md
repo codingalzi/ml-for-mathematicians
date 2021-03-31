@@ -76,9 +76,10 @@ Orange3 앱의 사용법은 아래 동영상을 참조하세요.
 
 ### 참고
 
+머신러닝 내용을 파이썬으로 직접 실행하고자 한다면 동일한 내용을 전공자를 위해 다루는 아래 강좌를 참조하세요.
+
+* [핸즈온 머신러닝 강좌](https://codingalzi.github.io/handson-ml/)
+
 파이썬 기초 강좌는 아래 사이트를 업데이트 하는 형식으로 제공됩니다.
 
 * [파이썬 데이터 과학 입문](https://formal.hknu.ac.kr/Gongsu-DataSci/)
-
-머신러닝 내용을 파이썬으로 직접 실행하고자 한다면
-동일한 내용을 전공자를 위해 소개하는 [핸즈온 머신러닝 강좌](https://codingalzi.github.io/handson-ml/)를 참조하세요.
