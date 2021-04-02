@@ -15,61 +15,6 @@
 * 슬라이드: [[html]](./slides/mlmath00-intro.slides.html), 
     [[pdf]](./slides/mlmath00-intro-slides.pdf)
 
-<style>
-td, th {
-  width: 4rem;
-  height: 2rem;
-  border: 1px solid #ccc;
-  text-align: center;
-}
-th {
-  background: lightblue;
-  border-color: white;
-}
-body {
-  padding: 1rem;
-}
-</style>
-
-<table>
-  <tr>
-    <th>1</th>
-    <th>2</th>
-    <th>3</th>
-    <th>4</th>
-    <th>5</th>
-  </tr>
-  <tr>
-    <th>2</th>
-    <td>4</td>
-    <td>6</td>
-    <td>8</td>
-    <td>10</td>
-  </tr>
-  <tr>
-    <th>3</th>
-    <td>6</td>
-    <td>9</td>
-    <td>12</td>
-    <td>15</td>
-  </tr>
-  <tr>
-    <th>4</th>
-    <td>8</td>
-    <td>12</td>
-    <td>16</td>
-    <td>20</td>
-  </tr>
-  <tr>
-    <th>5</th>
-    <td>10</td>
-    <td>15</td>
-    <td>20</td>
-    <td>25</td>
-  </tr>
-</table>
-
-
 ### 목차
 
 #### 머신러닝
