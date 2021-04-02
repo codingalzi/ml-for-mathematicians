@@ -15,24 +15,6 @@
 * 슬라이드: [[html]](./slides/mlmath00-intro.slides.html), 
     [[pdf]](./slides/mlmath00-intro-slides.pdf)
 
-<table>
-  <tr>
-    <th>Name:</th>
-    <td>John Doe</td>
-  </tr>
-  <tr>
-    <th>Email:</th>  
-    <td>john.doe@example.com</td>      
-  </tr>  
-  <tr>
-    <th rowspan="2">Phone:</th>
-    <td>123-45-678</td>
-  </tr>
-  <tr>
-    <td>212-00-546</td>
-  </tr>
-</table>
-
 ### 목차
 
 #### 머신러닝
