@@ -27,6 +27,10 @@
     [[pdf]](./slides/mlmath02-slides.pdf)
     * Orange3 실습: <a href="https://raw.githubusercontent.com/codingalzi/mle/master/orange3/california_house-prices.ows" download>[workflow]</a>, 
     <a href="https://raw.githubusercontent.com/codingalzi/mle/master/orange3/california_house_prices.tab" download>[data]</a>
+1. 분류
+    * 슬라이드: [[html]](./slides/mlmath03.slides.html), 
+    [[pdf]](./slides/mlmath03-slides.pdf)
+    * Orange3 실습: <a href="https://raw.githubusercontent.com/codingalzi/handson-ml/master/orange3/iris/iris.ows" download>[workflow]</a>
 1. ...
 
 #### 파이썬 기초
