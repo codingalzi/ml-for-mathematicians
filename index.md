@@ -25,11 +25,11 @@
 1. 머신러닝 프로젝트 처음부터 끝까지
     * 슬라이드: [[html]](./slides/mlmath02.slides.html), 
     [[pdf]](./slides/mlmath02-slides.pdf)
-    * Orange3 실습: <a href="https://raw.githubusercontent.com/codingalzi/handson-ml/master/orange3/housing/housing.zip" download>[workflow]</a>
+    * Orange3 실습: <a href="https://raw.githubusercontent.com/codingalzi/handson-ml2/master/orange3/housing/housing.zip" download>[workflow]</a>
 1. 분류
     * 슬라이드: [[html]](./slides/mlmath03.slides.html), 
     [[pdf]](./slides/mlmath03-slides.pdf)
-    * Orange3 실습: <a href="https://raw.githubusercontent.com/codingalzi/handson-ml/master/orange3/iris/iris.zip" download>[workflow]</a>
+    * Orange3 실습: <a href="https://raw.githubusercontent.com/codingalzi/handson-ml2/master/orange3/iris/iris.zip" download>[workflow]</a>
 1. ...
 
 #### 파이썬 기초
@@ -89,7 +89,7 @@ Orange3 앱의 사용법은 아래 동영상을 참조하세요.
 
 머신러닝 내용을 파이썬으로 직접 실행하고자 한다면 동일한 내용을 전공자를 위해 다루는 아래 강좌를 참조하세요.
 
-* [핸즈온 머신러닝 강좌](https://codingalzi.github.io/handson-ml/)
+* [핸즈온 머신러닝 강좌](https://codingalzi.github.io/handson-ml2/)
 
 파이썬 기초 강좌는 아래 사이트를 업데이트 하는 형식으로 제공됩니다.
 
