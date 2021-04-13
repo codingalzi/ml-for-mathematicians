@@ -61,6 +61,9 @@
 1. 실습 1 &nbsp;
     [[html]](./practices/practice01.html),
     [[colab]](https://colab.research.google.com/github/codingalzi/mle/blob/master/practices/practice01.ipynb)
+1. 실습 1 &nbsp;
+    [[html]](./practices/practice02.html),
+    [[colab]](https://colab.research.google.com/github/codingalzi/mle/blob/master/practices/practice02.ipynb)
 1. ...
 
 **링크 활용법**
