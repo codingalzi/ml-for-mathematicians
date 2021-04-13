@@ -61,7 +61,7 @@
 1. 실습 1 &nbsp;
     [[html]](./practices/practice01.html),
     [[colab]](https://colab.research.google.com/github/codingalzi/mle/blob/master/practices/practice01.ipynb)
-1. 실습 1 &nbsp;
+1. 실습 2 &nbsp;
     [[html]](./practices/practice02.html),
     [[colab]](https://colab.research.google.com/github/codingalzi/mle/blob/master/practices/practice02.ipynb)
 1. ...
@@ -71,7 +71,7 @@
 * html 버전: 읽기 전용 주피터 노트북 또는 슬라이드
 * pdf: PC 용 pdf 슬라이드
 * colab: 구글 코랩에서 실행 가능한 주피터 노트북
-* workflow, data: Orange3에서 사용가능한 워크플로오와 데이터
+* workflow: Orange3에서 사용가능한 워크플로오와 데이터 (다운로드 전용)
 
 ### 프로그래밍 환경
 

@@ -16021,6 +16021,754 @@ None None
 
 </div>
 </div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#50672;&#49845;&#47928;&#51228;">&#50672;&#49845;&#47928;&#51228;<a class="anchor-link" href="#&#50672;&#49845;&#47928;&#51228;">&#182;</a></h2>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>3장 마지막 예제에서 숫자 맞히기 게임을 아래와 같이 구현하였다.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c1"># 컴퓨터가 1에서 100사이의 값을 무작위로 선택</span>
+<span class="n">secret</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># secret을 맞출 때까지 반복해서 guess함.</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">guess</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;맞춰보세요: &quot;</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">secret</span> <span class="o">==</span> <span class="n">guess</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;정답입니다.&quot;</span><span class="p">)</span>
+        <span class="k">break</span>                   <span class="c1"># 정답이면 게임 종료</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;틀렸습니다.&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">guess</span> <span class="o">&lt;</span> <span class="n">secret</span><span class="p">:</span>     <span class="c1"># 오답이면 크기 비교 알려주기</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;너무 작아!&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;너무 커!&quot;</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;종료합니다.&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>맞춰보세요: 50
+틀렸습니다.
+너무 커!
+맞춰보세요: 25
+틀렸습니다.
+너무 작아!
+맞춰보세요: 37
+틀렸습니다.
+너무 작아!
+맞춰보세요: 44
+정답입니다.
+종료합니다.
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>이제 위 코드를 함수로 선언해보자.
+다만 예측 횟수를 제한하는 역할을 수행하는 값을 인자로 받도록 한다.
+즉, 함수가 적절한 인자와 함께 호출되면 게임이 제한된 횟수 내에  <code>secret</code>을 맞혀야 하며
+그렇지 않으면 게임이 자동으로 종료되도록 한다.</p>
+<p>함수 이름, 인자, 반환값에 대한 정보는 아래와 같이 정해보자.</p>
+<ul>
+<li>함수 이름: <code>guessing</code></li>
+<li>인자: 허용된 예측 횟수를 나타내는 <code>count_limit</code></li>
+<li>반환값: 제한 횟수 내에 맞혔을 경우엔 추측 횟수, 그렇지 않은 경우엔 제한 횟수 내에 맞히지 못했다는 정보.</li>
+</ul>
+<p>매개변수 <code>cout_limit</code>는 게임을 진행할 때 예측 횟수를 제한하는 역할을 수행하는 값을 인자로 받는다.
+예를 들어 5가 인자로 사용되면 게임 참여자는 최대 5번 이내에 답을 맞혀야 하며,
+그렇지 않으면 게임이 자동 종료된다.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>업그레이드 1 단계</strong></p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>함수를 선언하기 전에 먼저 위 게임을 특정 값을 이용하여 예측 횟수를 제한하도록 해보자.
+그러기 위해서는 예를 들어 아래 두 개의 변수를 사용할 수 있다.</p>
+<ul>
+<li><code>count_limit</code>: 예측 제한 횟수</li>
+<li><code>count</code>: 예측한 횟수</li>
+</ul>
+<p>즉, 게임 참여자가 예측할 때마다 <code>count</code>가 가리키는 값을 1씩 키워준 후 그 값이 <code>count_limit</code>가
+가리키는 값과 같아지면 게임을 멈추게 하면 된다.</p>
+<p>예를 들어, 아래 코드는 예측을 최대 5번까지만 허용한다.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">secret</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="n">count_limit</span> <span class="o">=</span> <span class="mi">5</span>   <span class="c1"># 예측 제한 횟수 지정</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>         <span class="c1"># 게임 시작할 때 예측한 횟수를 0으로 초기화하기</span>
+
+<span class="c1"># count 값이 count_limit 보다 작은 동안 게임 진행</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">!=</span> <span class="n">count_limit</span><span class="p">:</span>
+    <span class="n">guess</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;맞춰보세요: &quot;</span><span class="p">))</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>             <span class="c1"># 예측할 때마다 1씩 키워주기</span>
+
+    <span class="k">if</span> <span class="n">secret</span> <span class="o">==</span> <span class="n">guess</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;정답입니다.&quot;</span><span class="p">)</span>
+        <span class="k">break</span>                  <span class="c1"># 게임 종료</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;틀렸습니다.&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">guess</span> <span class="o">&lt;</span> <span class="n">secret</span><span class="p">:</span>  
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;너무 작아!&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;너무 커!&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;종료합니다.&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>맞춰보세요: 50
+틀렸습니다.
+너무 커!
+맞춰보세요: 25
+틀렸습니다.
+너무 커!
+맞춰보세요: 13
+틀렸습니다.
+너무 커!
+맞춰보세요: 7
+정답입니다.
+종료합니다.
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>예측 횟수를 4번으로 제한하고 싶으면 아래와 같이 <code>count_limit</code> 변수가 가리키는 값을 4로 수정하면 된다.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">secret</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="n">count_limit</span> <span class="o">=</span> <span class="mi">4</span>   <span class="c1"># 예측 제한 횟수 = 4</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>   
+
+<span class="k">while</span> <span class="n">count</span> <span class="o">!=</span> <span class="n">count_limit</span><span class="p">:</span>
+    <span class="n">guess</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;맞춰보세요: &quot;</span><span class="p">))</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>           
+
+    <span class="k">if</span> <span class="n">secret</span> <span class="o">==</span> <span class="n">guess</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;정답입니다.&quot;</span><span class="p">)</span>
+        <span class="k">break</span>          
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;틀렸습니다.&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">guess</span> <span class="o">&lt;</span> <span class="n">secret</span><span class="p">:</span>  
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;너무 작아!&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;너무 커!&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;종료합니다.&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>맞춰보세요: 50
+틀렸습니다.
+너무 커!
+맞춰보세요: 25
+틀렸습니다.
+너무 커!
+맞춰보세요: 13
+틀렸습니다.
+너무 작아!
+맞춰보세요: 19
+틀렸습니다.
+너무 작아!
+종료합니다.
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>업그레이드 2 단계</strong></p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>그런데 위와 같이 예측 횟수를 바꾸기 위해 코드 자체를 수정하는 것은 바람직하지 않다.
+이런 문제를 함수를 이용하면 매우 간단하게 해결할 수 있다.</p>
+<p>위 코드를 함수화하기 위해 생각해야 할 것은 하나이다. 무엇을 함수의 매개변수로 사용할 것인가?
+바로 예측 횟수, 즉 <code>count_limit</code> 변수를 함수의 매개변수로 지정하면 다른 것은 전혀 바꿀 필요가 없다.
+아래와 같이 함수의 이름을 <code>guessing()</code>로 지정하고, <code>count_limit</code>를 매개변수로 지정하고,
+나머지 코드는 그냥 들여쓰기만 하면 된다.
+단, <code>import random</code>은 함수 밖에 그대로 둔다.
+그리고 <code>count_limit=4</code> 명령문은 삭제한다. 
+이유는 <code>count_limit</code>의 값이 매개변수를 통해 지정되기 때문이다.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">def</span> <span class="nf">guessing</span><span class="p">(</span><span class="n">count_limit</span><span class="p">):</span>
+    <span class="n">secret</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+    <span class="c1"># count_limit = 4 # 더 이상 필요없음. 매개변수로 대체됨.</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>    
+
+    <span class="k">while</span> <span class="n">count</span> <span class="o">!=</span> <span class="n">count_limit</span><span class="p">:</span>
+        <span class="n">guess</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;맞춰보세요: &quot;</span><span class="p">))</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>        
+
+        <span class="k">if</span> <span class="n">secret</span> <span class="o">==</span> <span class="n">guess</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;정답입니다.&quot;</span><span class="p">)</span>
+            <span class="k">break</span>        
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;틀렸습니다.&quot;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">guess</span> <span class="o">&lt;</span> <span class="n">secret</span><span class="p">:</span>  
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;너무 작아!&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;너무 커!&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;종료합니다.&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>이제 <code>guessing()</code> 함수를 적절한 인자와 함께 호출하면 게임이 시작된다.
+예를 들어 예측횟수를 5회로 제한하려면 5와 함께 호출한다.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">guessing</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>맞춰보세요: 50
+틀렸습니다.
+너무 작아!
+맞춰보세요: 75
+틀렸습니다.
+너무 커!
+맞춰보세요: 63
+틀렸습니다.
+너무 작아!
+맞춰보세요: 69
+틀렸습니다.
+너무 커!
+맞춰보세요: 66
+정답입니다.
+종료합니다.
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>예측 횟수를 4로 제한하려면 4를 인자로 사용한다.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">guessing</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>맞춰보세요: 50
+틀렸습니다.
+너무 작아!
+맞춰보세요: 75
+틀렸습니다.
+너무 커!
+맞춰보세요: 66
+틀렸습니다.
+너무 작아!
+맞춰보세요: 70
+틀렸습니다.
+너무 커!
+종료합니다.
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>업그레이드 3 단계</strong></p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>게임이 종료될 때 몇 번 예측했는지, 아니면 몇 번까지 예측한 후에 게임이 종료되었는가를 반환하도록 함수를 살짝 
+업그레이드해 보자.</p>
+<p>먼저 어떤 경우에 게임이 종료되는가를 확인해야 한다.</p>
+<ul>
+<li>경우 1: 제한 횟수 내에 정답을 맞히는 경우</li>
+<li>경우 2: 제한 횟수 내에 정답을 맞히지 못하는 경우</li>
+</ul>
+<p>첫째 경우엔 예측한 횟수를, 둘째 경우엔 제한 횟수를 반환하도록 할 수 있다.
+따라서 각각의 경우에 모두 <code>return</code> 예약어를 이용하여 반환값을 지정해야 한다.
+경우에 따라 <code>return</code> 예약어의 위치가 달라짐에 주의하라. 특히 들여쓰기 수준에 주의해야 한다.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">def</span> <span class="nf">guessing</span><span class="p">(</span><span class="n">count_limit</span><span class="p">):</span>
+    <span class="n">secret</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>   
+    <span class="k">while</span> <span class="n">count</span> <span class="o">!=</span> <span class="n">count_limit</span><span class="p">:</span>
+        <span class="n">guess</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;맞춰보세요: &quot;</span><span class="p">))</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>           
+
+        <span class="k">if</span> <span class="n">secret</span> <span class="o">==</span> <span class="n">guess</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;정답입니다.&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">count</span>       <span class="c1"># 경우 1: 제한 횟수 이전에 예측한 횟수</span>
+            <span class="c1"># break            # 더 이상 필요 없음. return 이후에는 무조건 함수의 실행이 종료됨.</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;틀렸습니다.&quot;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">guess</span> <span class="o">&lt;</span> <span class="n">secret</span><span class="p">:</span>  
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;너무 작아!&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;너무 커!&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;종료합니다.&quot;</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">count_limit</span>         <span class="c1"># 경우 2: 제한 횟수에 도달했을 때</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>이제는 게임이 종료될 때마다 예측한 횟수를 알려준다.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">guessing</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>맞춰보세요: 50
+틀렸습니다.
+너무 작아!
+맞춰보세요: 75
+틀렸습니다.
+너무 커!
+맞춰보세요: 63
+틀렸습니다.
+너무 커!
+맞춰보세요: 57
+틀렸습니다.
+너무 커!
+맞춰보세요: 54
+정답입니다.
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[46]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>5</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>업그레이드 4 단계</strong></p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>마지막으로 한 번 업그레이드한다. 
+이번엔 <code>count_limit</code> 매개변수를 키워드 인자로 사용한다.
+1부터 100까지의 정수를 예측하는 게임이고 이진탐색 방식을 이용하면 최대 7번이면 답을 맞힐 수 있다.
+따라서 <code>count_limit=7</code>로 지정하도록 하자.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">def</span> <span class="nf">guessing</span><span class="p">(</span><span class="n">count_limit</span><span class="o">=</span><span class="mi">7</span><span class="p">):</span>           <span class="c1"># 키워드 인자를 7로 지정.</span>
+    <span class="n">secret</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>   
+    <span class="k">while</span> <span class="n">count</span> <span class="o">!=</span> <span class="n">count_limit</span><span class="p">:</span>
+        <span class="n">guess</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;맞춰보세요: &quot;</span><span class="p">))</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>           
+
+        <span class="k">if</span> <span class="n">secret</span> <span class="o">==</span> <span class="n">guess</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;정답입니다.&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">count</span>   
+            <span class="c1"># break        </span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;틀렸습니다.&quot;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">guess</span> <span class="o">&lt;</span> <span class="n">secret</span><span class="p">:</span>  
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;너무 작아!&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;너무 커!&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;종료합니다.&quot;</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">count_limit</span>     
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>이제 <code>guessing()</code> 함수를 호출할 때 인자를 지정하지 않아도 되며, 그럴 때는 자동으로 
+예측 횟수가 7로 제한된다.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">guessing</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>맞춰보세요: 50
+틀렸습니다.
+너무 작아!
+맞춰보세요: 75
+틀렸습니다.
+너무 커!
+맞춰보세요: 64
+틀렸습니다.
+너무 작아!
+맞춰보세요: 69
+틀렸습니다.
+너무 커!
+맞춰보세요: 66
+틀렸습니다.
+너무 커!
+맞춰보세요: 65
+정답입니다.
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[48]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>6</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>물론 원하는 값으로 예측 횟수를 제한할 수 있다.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">guessing</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>맞춰보세요: 50
+틀렸습니다.
+너무 작아!
+맞춰보세요: 75
+틀렸습니다.
+너무 커!
+맞춰보세요: 66
+틀렸습니다.
+너무 커!
+종료합니다.
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[50]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>3</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 </body>
 
 
