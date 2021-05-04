@@ -14439,8 +14439,7 @@ $$\sigma(t) = \frac{1}{1 + e^{-t}}$$
 <ul>
 <li>로지스틱 회귀 모델에서 샘플 $\mathbf x$가 양성 클래스에 속할 확률</li>
 </ul>
-$$\hat p = h_\theta (\mathbf x)
-= \sigma(\theta_0 + \theta_1\, x_1 + \cdots + \theta_n\, x_n)$$
+$$\hat p = \sigma(\theta_0 + \theta_1\, x_1 + \cdots + \theta_n\, x_n)$$
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14469,6 +14468,67 @@ $$\theta_0 + \theta_1\, x_1 + \cdots + \theta_n\, x_n \ge 0$$
 </ul>
 $$\theta_0 + \theta_1\, x_1 + \cdots + \theta_n\, x_n &lt; 0$$
 </div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>예측을 잘 하는 파라미터 $\theta_0, \dots, \theta_n$를 찾아야 함.<ul>
+<li>다양한 머신러닝 기법 존재</li>
+<li>기본은 경사하강법</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#50696;&#51228;:-&#48531;&#44867;-&#45936;&#51060;&#53552;&#49483;">&#50696;&#51228;: &#48531;&#44867; &#45936;&#51060;&#53552;&#49483;<a class="anchor-link" href="#&#50696;&#51228;:-&#48531;&#44867;-&#45936;&#51060;&#53552;&#49483;">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>꽃받침(sepal)과 꽃입(petal)과 관련된 4개의 특성 사용: 꽃받침 길이, 꽃받침 너비, 꽃잎 길이, 꽃잎 너비</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>세 개의 품종 사용: 세토사, 버시컬러, 버지니카</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>타깃: <ul>
+<li>1: 버지니카 품종 맞음</li>
+<li>0: 버지니카 품종 아님</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>양성(1) 클래스인 경우: </li>
+</ul>
+$$\theta_0 + \theta_1\, x_1 + \cdots + \theta_n\, x_4 \ge 0$$
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>음성(0) 클래스인 경우: </li>
+</ul>
+$$\theta_0 + \theta_1\, x_1 + \cdots + \theta_n\, x_4 &lt; 0$$
+</div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14478,18 +14538,26 @@ $$\theta_0 + \theta_1\, x_1 + \cdots + \theta_n\, x_n &lt; 0$$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>비용함수: 로그 손실(log loss) 함수 사용</li>
+<li>비용함수: 로그 손실(log loss) 함수 사용. 단, $(i)$는 $i$번째 샘플을 가리킴.</li>
 </ul>
 $$
-J(\theta) = 
-- \frac{1}{m}\, \sum_{i=1}^{m}\, [y^{(i)}\, \log(\,\hat p^{(i)}\,) + (1-y^{(i)})\, \log(\,1 - \hat p^{(i)}\,)]
+\begin{align*}
+J(\mathbf{\theta}) 
+&amp;= 
+- \frac{1}{m}\, \sum_{i=1}^{m}\, [y^{(i)}\, \log(\,\hat p^{(i)}\,) + (1-y^{(i)})\, \log(\,1 - \hat p^{(i)}\,)] \\[1ex]
+\hat p^{(i)} &amp;= \sigma(\theta_0 + \theta_1\, x_1^{(i)} + \cdots + \theta_n\, x_n^{(i)})
+\end{align*}
 $$
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>모델 훈련: 위 비용함수에 대해 경사 하강법 적용</li>
+<li>모델 훈련<ul>
+<li>위 비용함수를 최소로 하는 $\theta_0, \dots, \theta_n$을 찾아야 함.</li>
+<li>위 비용함수에 대해 경사 하강법 적용</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -14521,72 +14589,12 @@ $$
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#47196;&#44536;-&#49552;&#49892;-&#54632;&#49688;&#51032;-&#54200;&#46020;-&#54632;&#49688;">&#47196;&#44536; &#49552;&#49892; &#54632;&#49688;&#51032; &#54200;&#46020; &#54632;&#49688;<a class="anchor-link" href="#&#47196;&#44536;-&#49552;&#49892;-&#54632;&#49688;&#51032;-&#54200;&#46020;-&#54632;&#49688;">&#182;</a></h4>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-$$
-\dfrac{\partial}{\partial \theta_j} \text{J}(\boldsymbol{\theta}) = \dfrac{1}{m}\sum\limits_{i=1}^{m}\left(\mathbf{\sigma(\boldsymbol{\theta}}^T \mathbf{x}^{(i)}) - y^{(i)}\right)\, x_j^{(i)}
-$$
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>편도 함수가 선형 회귀의 경우와 매우 비슷한 것에 대한 확률론적 근거가 있음.</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li><strong>참고:</strong> <a href="https://www.youtube.com/watch?v=jGwO_UgTS7I&amp;list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU">앤드류 응(Andrew Ng) 교수의 Stanford CS229</a></li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="&#44208;&#51221;-&#44221;&#44228;">&#44208;&#51221; &#44221;&#44228;<a class="anchor-link" href="#&#44208;&#51221;-&#44221;&#44228;">&#182;</a></h3>
 </div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#50696;&#51228;:-&#48531;&#44867;-&#45936;&#51060;&#53552;&#49483;">&#50696;&#51228;: &#48531;&#44867; &#45936;&#51060;&#53552;&#49483;<a class="anchor-link" href="#&#50696;&#51228;:-&#48531;&#44867;-&#45936;&#51060;&#53552;&#49483;">&#182;</a></h4>
-</div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>꽃받침(sepal)과 꽃입(petal)과 관련된 4개의 특성 사용<ul>
-<li>꽃받침 길이</li>
-<li>꽃받침 너비</li>
-<li>꽃잎 길이</li>
-<li>꽃잎 너비</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>타깃: 세 개의 품종<ul>
-<li>0: Iris-Setosa(세토사)</li>
-<li>1: Iris-Versicolor(버시컬러)</li>
-<li>2: Iris-Virginica(버지니카)</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#44867;&#51086;&#51032;-&#45320;&#48708;&#47484;-&#44592;&#51456;&#51004;&#47196;-Iris-Virginica-&#50668;&#48512;-&#54032;&#51221;&#54616;&#44592;">&#44867;&#51086;&#51032; &#45320;&#48708;&#47484; &#44592;&#51456;&#51004;&#47196; Iris-Virginica &#50668;&#48512; &#54032;&#51221;&#54616;&#44592;<a class="anchor-link" href="#&#44867;&#51086;&#51032;-&#45320;&#48708;&#47484;-&#44592;&#51456;&#51004;&#47196;-Iris-Virginica-&#50668;&#48512;-&#54032;&#51221;&#54616;&#44592;">&#182;</a></h4><ul>
+<h4 id="&#50696;&#51228;:-&#44867;&#51086;&#51032;-&#45320;&#48708;&#47484;-&#44592;&#51456;&#51004;&#47196;-Iris-Virginica-&#50668;&#48512;-&#54032;&#51221;&#54616;&#44592;">&#50696;&#51228;: &#44867;&#51086;&#51032; &#45320;&#48708;&#47484; &#44592;&#51456;&#51004;&#47196; Iris-Virginica &#50668;&#48512; &#54032;&#51221;&#54616;&#44592;<a class="anchor-link" href="#&#50696;&#51228;:-&#44867;&#51086;&#51032;-&#45320;&#48708;&#47484;-&#44592;&#51456;&#51004;&#47196;-Iris-Virginica-&#50668;&#48512;-&#54032;&#51221;&#54616;&#44592;">&#182;</a></h4><ul>
 <li>결정경계: 약 1.6cm</li>
 </ul>
 
