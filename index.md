@@ -30,6 +30,9 @@
     * 슬라이드: [[html]](./slides/mlmath03.slides.html), 
     [[pdf]](./slides/mlmath03-slides.pdf)
     * Orange3 실습: <a href="https://raw.githubusercontent.com/codingalzi/handson-ml2/master/orange3/iris/iris.zip" download>[workflow]</a>
+1. 로지스틱 회귀
+    * 슬라이드: [[html]](./slides/mlmath04.slides.html), 
+    [[pdf]](./slides/mlmath04-slides.pdf)
 1. ...
 
 #### 파이썬 기초
