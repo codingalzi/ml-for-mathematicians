@@ -57,25 +57,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .ss { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Symbol */
 .highlight .il { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer.Long */
   </style>
-<style type="text/css">
-    
-
-<script>
-    MathJax.Hub.Config({
-        "HTML-CSS": {
-            /*preferredFont: "TeX",*/
-            /*availableFonts: ["TeX", "STIX"],*/
-            styles: {
-                scale: 100,
-                ".MathJax_Display": {
-                    "font-size": "100%",
-                }
-            }
-        }
-    });
-</script>
-    
-  </style>
 
 
 
@@ -14298,15 +14279,13 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># pass와 None을 각각 적절한 코드와 표현식으로 대체하라.</span>
 
 <span class="k">def</span> <span class="nf">inserting_tab</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="k">pass</span>
-
-    <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">s</span>
 </pre></div>
 
      </div>
@@ -14317,7 +14296,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">inserting_tab</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">))</span>
@@ -14338,7 +14317,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">song</span> <span class="o">=</span> <span class="s2">&quot;When you are smiling, the whole world smiles with you&quot;</span>
@@ -14355,15 +14334,16 @@ a.anchor-link {
 <p>위 문자열에서 <code>a</code>가 등장하는 횟수를 구하는 코드는 다음과 같다.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">count_a</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">song</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">word</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span>
+
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">song</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span>
         <span class="n">count_a</span> <span class="o">+=</span> <span class="mi">1</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">count_a</span><span class="p">)</span>
@@ -14374,21 +14354,42 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>1
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>위 문자열에서 대소문자 구별없이 <code>w</code>가 등장하는 횟수를 구하는 코드는 다음과 같다.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">count_w</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">song</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
-    <span class="k">if</span> <span class="n">word</span> <span class="o">==</span> <span class="s1">&#39;w&#39;</span><span class="p">:</span>
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">song</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="s1">&#39;w&#39;</span><span class="p">:</span>
         <span class="n">count_w</span> <span class="o">+=</span> <span class="mi">1</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">count_w</span><span class="p">)</span>
@@ -14399,24 +14400,51 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>4
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>A. <code>song</code>이 가리키는 문자열에서 모음과 공백을 제거한 문자열 <code>whnyrsmlngthwhlwrldsmlswthy</code>를 
+<p>A. <code>song</code>이 가리키는 문자열에서 모음과 공백, 그리고 쉼표를 제거한 문자열 <code>whnyrsmlngthwhlwrldsmlswthy</code>를 
 생성하는 코드를 구현하라.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># pass 를 적절한 코드로 대체하라.</span>
 
 <span class="n">new_song</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">song</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
-    <span class="k">pass</span>
+<span class="n">vowel_space</span> <span class="o">=</span> <span class="s1">&#39;aeiou ,&#39;</span>
+
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">song</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">vowel_space</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">else</span><span class="p">:</span>
+<span class="c1">#         new_song = new_song+letter</span>
+        <span class="n">new_song</span> <span class="o">+=</span> <span class="n">letter</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">new_song</span><span class="p">)</span>
 </pre></div>
@@ -14424,6 +14452,27 @@ a.anchor-link {
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>whnyrsmlngthwhlwrldsmlswthy
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -14436,27 +14485,53 @@ a.anchor-link {
 </ul>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># pass 를 적절한 코드로 대체하라.</span>
 
 <span class="k">def</span> <span class="nf">remove_letters</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="n">new_song</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">song</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
-        <span class="k">pass</span>
+    <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">song</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_song</span> <span class="o">+=</span> <span class="n">letter</span>
     
     <span class="k">return</span> <span class="n">new_song</span>
 
-<span class="n">remove_letters</span><span class="p">(</span><span class="s1">&#39;aeiou &#39;</span><span class="p">)</span>
+<span class="n">remove_letters</span><span class="p">(</span><span class="s1">&#39;aeiou ,&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&#39;whnyrsmlngthwhlwrldsmlswthy&#39;</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -14473,23 +14548,50 @@ a.anchor-link {
 <p>힌트: 문자열과 정수의 곱셈을 이용한다.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># pass와 None을 각각 적절한 코드와 적절한 표현식으로 대체하라.</span>
 
 <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
 
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="k">pass</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*&quot;</span> <span class="o">*</span> <span class="p">(</span><span class="mi">6</span><span class="o">-</span><span class="n">i</span><span class="p">))</span>
+    
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>*****
+****
+***
+**
+*
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -14503,18 +14605,21 @@ a.anchor-link {
 <p>힌트: 문자열과 정수의 곱셈을 이용한다.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># pass와 None을 각각 적절한 코드와 적절한 표현식으로 대체하라.</span>
 
 <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
 
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="k">pass</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">*</span> <span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*&quot;</span> <span class="o">*</span> <span class="p">(</span><span class="mi">6</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+    
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
 </pre></div>
 
      </div>
@@ -14522,10 +14627,33 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>*****
+ ***
+  *
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>(c) 위 (b)의 문제를 임의의 양의 홀수 n에 대하여 작동하도록 일반화하는 함수 <code>reversed_triangle()</code>를
+<p>C. 위 B의 문제를 임의의 양의 홀수 n에 대하여 작동하도록 일반화하는 함수 <code>reversed_triangle()</code>를
 정의하라. 예를 들어, n=7이면 다음과 같이 출력해야 한다.</p>
 <div class="highlight"><pre><span></span><span class="o">*******</span>
  <span class="o">*****</span>
@@ -14538,24 +14666,69 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># pass와 None을 각각 적절한 코드와 적절한 표현식으로 대체하라.</span>
 
 <span class="k">def</span> <span class="nf">reversed_triangle</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="c1"># n은 홀수 이어야 함.</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">None</span>
-    
-    <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">pass</span>
+    <span class="c1"># 이제부터 n은 홀수임.</span>
+
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*&quot;</span> <span class="o">*</span> <span class="n">k</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">reversed_triangle</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>*******
+ *****
+  ***
+   *
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -14572,10 +14745,10 @@ a.anchor-link {
 구체적인 이유는 나중에 함수를 다룰 때 설명한다.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># pass와 None을 각각 적절한 코드와 적절한 표현식으로 대체하라.</span>
@@ -14583,11 +14756,13 @@ a.anchor-link {
 <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 
-<span class="k">while</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">pass</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">//</span><span class="mi">2</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">pass</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">1</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14595,10 +14770,30 @@ a.anchor-link {
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>3 10 5 16 8 4 2 1 </pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># pass와 None을 각각 적절한 코드와 적절한 표현식으로 대체하라.</span>
@@ -14606,16 +14801,38 @@ a.anchor-link {
 <span class="n">x</span> <span class="o">=</span> <span class="mi">7</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 
-<span class="k">while</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">pass</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">//</span><span class="mi">2</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">pass</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">1</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1 </pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -14624,10 +14841,10 @@ a.anchor-link {
 <p>111에서 시작하면 1에 도착할 때까지 꽤 올래 걸린다.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># pass와 None을 각각 적절한 코드와 적절한 표현식으로 대체하라.</span>
@@ -14635,11 +14852,13 @@ a.anchor-link {
 <span class="n">x</span> <span class="o">=</span> <span class="mi">111</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 
-<span class="k">while</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">pass</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">//</span><span class="mi">2</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">pass</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">1</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14647,10 +14866,208 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>111 334 167 502 251 754 377 1132 566 283 850 425 1276 638 319 958 479 1438 719 2158 1079 3238 1619 4858 2429 7288 3644 1822 911 2734 1367 4102 2051 6154 3077 9232 4616 2308 1154 577 1732 866 433 1300 650 325 976 488 244 122 61 184 92 46 23 70 35 106 53 160 80 40 20 10 5 16 8 4 2 1 </pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>문제 5.</strong> 다음과 같은 격자를 그리는 함수 <code>painting_check_2()</code>를 작성하라.</p>
+<p>인를 받아 위 수열(콜라츠 수열)을 출력하는 함수 <code>collatz()</code>를 선언하세요.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">collatz</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+    <span class="k">while</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">//</span><span class="mi">2</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">1</span> 
+            <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">collatz</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>111 334 167 502 251 754 377 1132 566 283 850 425 1276 638 319 958 479 1438 719 2158 1079 3238 1619 4858 2429 7288 3644 1822 911 2734 1367 4102 2051 6154 3077 9232 4616 2308 1154 577 1732 866 433 1300 650 325 976 488 244 122 61 184 92 46 23 70 35 106 53 160 80 40 20 10 5 16 8 4 2 1 </pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">collatz</span><span class="p">(</span><span class="mi">653821</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>653821 1961464 980732 490366 245183 735550 367775 1103326 551663 1654990 827495 2482486 1241243 3723730 1861865 5585596 2792798 1396399 4189198 2094599 6283798 3141899 9425698 4712849 14138548 7069274 3534637 10603912 5301956 2650978 1325489 3976468 1988234 994117 2982352 1491176 745588 372794 186397 559192 279596 139798 69899 209698 104849 314548 157274 78637 235912 117956 58978 29489 88468 44234 22117 66352 33176 16588 8294 4147 12442 6221 18664 9332 4666 2333 7000 3500 1750 875 2626 1313 3940 1970 985 2956 1478 739 2218 1109 3328 1664 832 416 208 104 52 26 13 40 20 10 5 16 8 4 2 1 </pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><code>collatz()</code> 함수가 출력하는 수열의 길이를 반환하도록 선언하세요.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">collatz</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">1</span>
+    
+    <span class="k">while</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">//</span><span class="mi">2</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">1</span> 
+            <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+            
+    <span class="k">return</span> <span class="n">count</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">collatz</span><span class="p">(</span><span class="mi">653821</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>653821 1961464 980732 490366 245183 735550 367775 1103326 551663 1654990 827495 2482486 1241243 3723730 1861865 5585596 2792798 1396399 4189198 2094599 6283798 3141899 9425698 4712849 14138548 7069274 3534637 10603912 5301956 2650978 1325489 3976468 1988234 994117 2982352 1491176 745588 372794 186397 559192 279596 139798 69899 209698 104849 314548 157274 78637 235912 117956 58978 29489 88468 44234 22117 66352 33176 16588 8294 4147 12442 6221 18664 9332 4666 2333 7000 3500 1750 875 2626 1313 3940 1970 985 2956 1478 739 2218 1109 3328 1664 832 416 208 104 52 26 13 40 20 10 5 16 8 4 2 1 </pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>98</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>문제 5.</strong> 다음과 같은 격자를 그리는 함수 <code>print_grid()</code>를 작성하라.</p>
 <div class="highlight"><pre><span></span><span class="o">+</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">+</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">+</span>
 <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>
 <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>
@@ -14670,18 +15087,47 @@ a.anchor-link {
 </pre></div>
 
 </div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>견본답안</strong></p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># pass 를 적절한 코드로 대체하라.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">do_twice</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="n">f</span><span class="p">()</span>
+    <span class="n">f</span><span class="p">()</span>
 
-<span class="k">def</span> <span class="nf">painting_check_2</span><span class="p">():</span>
-    <span class="k">pass</span>
+<span class="k">def</span> <span class="nf">do_four</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="n">do_twice</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="n">do_twice</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 
-    <span class="k">return</span> <span class="kc">None</span>
+<span class="k">def</span> <span class="nf">print_beam</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;+ - - - -&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">print_post</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;|        &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">print_beams</span><span class="p">():</span>
+    <span class="n">do_twice</span><span class="p">(</span><span class="n">print_beam</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">print_posts</span><span class="p">():</span>
+    <span class="n">do_twice</span><span class="p">(</span><span class="n">print_post</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">print_row</span><span class="p">():</span>
+    <span class="n">print_beams</span><span class="p">()</span>
+    <span class="n">do_four</span><span class="p">(</span><span class="n">print_posts</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">print_grid</span><span class="p">():</span>
+    <span class="n">do_twice</span><span class="p">(</span><span class="n">print_row</span><span class="p">)</span>
+    <span class="n">print_beams</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14689,83 +15135,131 @@ a.anchor-link {
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">painting_check_2</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_grid</span><span class="p">()</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>+ - - - - + - - - - +
+|         |         |
+|         |         |
+|         |         |
+|         |         |
++ - - - - + - - - - +
+|         |         |
+|         |         |
+|         |         |
+|         |         |
++ - - - - + - - - - +
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>문제 6.</strong> 4개의 행과 4개의 열을 갖는 격자를 그리는 함수 <code>painting_check_4()</code>를 작성하라.
-단, 입력값은 없으며, 반환값은 사용된 <code>+</code> 기호의 개수이다.</p>
-<p>힌트: 함수의 기능을 분리하여 여러 개의 함수로 정의한 다음에 정의된 함수들을 적절하게 조합하라.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># pass와 None을 각각 적절한 코드와 표현식으로 대체하라.</span>
-
-<span class="k">def</span> <span class="nf">painting_check_4</span><span class="p">():</span>
-    <span class="k">pass</span>
-
-    <span class="k">return</span> <span class="kc">None</span>
+<p><strong>문제 5.</strong> 다음과 같은 격자를 그리는 함수 <code>print_grid()</code>를 작성하라.</p>
+<div class="highlight"><pre><span></span><span class="o">+</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">+</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">+</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">+</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">+</span>
+<span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>
+<span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>
+<span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>
+<span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>
+<span class="o">+</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">+</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">+</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">+</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">+</span>
+<span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>
+<span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>
+<span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>
+<span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>
+<span class="o">+</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">+</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">+</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">+</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">+</span>
+<span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>
+<span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>
+<span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>
+<span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>
+<span class="o">+</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">+</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">+</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">+</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">+</span>
+<span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>
+<span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>
+<span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>
+<span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>
+<span class="o">+</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">+</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">+</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">+</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">+</span>
 </pre></div>
 
-     </div>
 </div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">painting_check_4</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>문제 7.</strong> 문제 5와 문제 6의 함수를 일반화하여 입력값 n이 주어지면 
-n개의 행과 n개의 열을 갖는 격자를 그리는 함수 <code>painting_check()</code>를 작성하라.
-단, 입력값은 양의 정수를 받는 n이며, 반환값은 사용된 <code>+</code> 기호의 개수이다.
-또한 <code>n=4</code>를 키워드 인자로 사용한다.</p>
-<p>힌트: 함수의 입력값 n에 대한 for 반복문을 활용하라.</p>
+<p><strong>견본답안</strong></p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># pass와 None을 각각 적절한 코드와 표현식으로 대체하라.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">one_four_one</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
+    <span class="n">f</span><span class="p">()</span>
+    <span class="n">do_four</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+    <span class="n">h</span><span class="p">()</span>
 
-<span class="k">def</span> <span class="nf">painting_check</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
-    <span class="k">pass</span>
+<span class="k">def</span> <span class="nf">print_plus</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 
-    <span class="k">return</span> <span class="kc">None</span>
+<span class="k">def</span> <span class="nf">print_dash</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">print_bar</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">print_space</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">print_end</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">nothing</span><span class="p">():</span>
+    <span class="s2">&quot;do nothing&quot;</span>
+
+<span class="k">def</span> <span class="nf">print1beam</span><span class="p">():</span>
+    <span class="n">one_four_one</span><span class="p">(</span><span class="n">nothing</span><span class="p">,</span> <span class="n">print_dash</span><span class="p">,</span> <span class="n">print_plus</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">print1post</span><span class="p">():</span>
+    <span class="n">one_four_one</span><span class="p">(</span><span class="n">nothing</span><span class="p">,</span> <span class="n">print_space</span><span class="p">,</span> <span class="n">print_bar</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">print4beams</span><span class="p">():</span>
+    <span class="n">one_four_one</span><span class="p">(</span><span class="n">print_plus</span><span class="p">,</span> <span class="n">print1beam</span><span class="p">,</span> <span class="n">print_end</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">print4posts</span><span class="p">():</span>
+    <span class="n">one_four_one</span><span class="p">(</span><span class="n">print_bar</span><span class="p">,</span> <span class="n">print1post</span><span class="p">,</span> <span class="n">print_end</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">print_row</span><span class="p">():</span>
+    <span class="n">one_four_one</span><span class="p">(</span><span class="n">nothing</span><span class="p">,</span> <span class="n">print4posts</span><span class="p">,</span> <span class="n">print4beams</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">print_grid</span><span class="p">():</span>
+    <span class="n">one_four_one</span><span class="p">(</span><span class="n">print4beams</span><span class="p">,</span> <span class="n">print_row</span><span class="p">,</span> <span class="n">nothing</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14773,18 +15267,59 @@ n개의 행과 n개의 열을 갖는 격자를 그리는 함수 <code>painting_c
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">painting_check</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_grid</span><span class="p">()</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>+ - - - - + - - - - + - - - - + - - - - + 
+|         |         |         |         | 
+|         |         |         |         | 
+|         |         |         |         | 
+|         |         |         |         | 
++ - - - - + - - - - + - - - - + - - - - + 
+|         |         |         |         | 
+|         |         |         |         | 
+|         |         |         |         | 
+|         |         |         |         | 
++ - - - - + - - - - + - - - - + - - - - + 
+|         |         |         |         | 
+|         |         |         |         | 
+|         |         |         |         | 
+|         |         |         |         | 
++ - - - - + - - - - + - - - - + - - - - + 
+|         |         |         |         | 
+|         |         |         |         | 
+|         |         |         |         | 
+|         |         |         |         | 
++ - - - - + - - - - + - - - - + - - - - + 
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
