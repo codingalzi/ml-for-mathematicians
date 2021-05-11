@@ -33,6 +33,11 @@
 1. 로지스틱 회귀
     * 슬라이드: [[html]](./slides/mlmath04.slides.html), 
     [[pdf]](./slides/mlmath04-slides.pdf)
+1. 경사하강법
+    * 슬라이드: [[html]](./slides/mlmath05.slides.html), 
+    [[pdf]](./slides/mlmath05-slides.pdf)
+    * 주피터 노트북: [[html]](./notebooks/mlmath05.html), 
+    [[colab]](https://colab.research.google.com/github/codingalzi/mle/blob/master/notebooks/mlmath05.ipynb)
 1. ...
 
 #### 파이썬 기초
