@@ -54,14 +54,14 @@
     [[html]](./notebooks/python03.html),
     [[colab]](https://colab.research.google.com/github/codingalzi/mle/blob/master/notebooks/python03.ipynb)
     - 제어문(if 조건문, for 반복문, while 반복문), 주요 예약어(pass, continue, break)
-1. 함수 1부 &nbsp;
+1. 함수 &nbsp;
     [[html]](./notebooks/python04.html),
     [[colab]](https://colab.research.google.com/github/codingalzi/mle/blob/master/notebooks/python04.ipynb)
     - 함수 정의, 매개 변수와 인자, 반환값, 함수 호출, 지역/전역 변수
-1. 함수 2부(준비중) &nbsp;
+1. 순차 자료형 1부 &nbsp;
     [[html]](./notebooks/python05.html),
     [[colab]](https://colab.research.google.com/github/codingalzi/mle/blob/master/notebooks/python05.ipynb)
-    - 재귀 함수, 스택
+    - 리스트
 1. ...
 
 #### 파이썬 기초 프로그래밍 실습
