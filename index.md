@@ -65,7 +65,7 @@
 1. 순차 자료형 2부 &nbsp;
     [[html]](./notebooks/python06.html),
     [[colab]](https://colab.research.google.com/github/codingalzi/mle/blob/master/notebooks/python06.ipynb)
-    - 튜를(순서쌍)
+    - 튜플(순서쌍)
 1. 순차 자료형 3부 &nbsp;
     [[html]](./notebooks/python07.html),
     [[colab]](https://colab.research.google.com/github/codingalzi/mle/blob/master/notebooks/python07.ipynb)
